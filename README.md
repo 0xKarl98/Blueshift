@@ -41,13 +41,11 @@ After 1 , go to another terminal for devnet deployment:
 solana config set --url devnet
 ```
 
-# Fund your local wallet to send tx to devnet 
-
+### Fund your local wallet to send tx to devnet 
 ```bash
 # Request SOL airdrop
 solana airdrop 2
 ```
-
 Check your balance:
 ```bash
 solana balance
