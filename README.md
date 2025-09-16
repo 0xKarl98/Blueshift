@@ -29,39 +29,22 @@ cargo test
 
 ## 🚀 Deployment
 
-### Step 1: Start Local Test Validator (for Local Development)
-
-If you're developing locally, start the test validator first:
-
+### Step 1: Start Local Test Validator 
 ```bash
 # Start local test validator (run in a separate terminal)
 solana-test-validator
 ```
 
 ### Step 2: Configure Solana CLI
-
 After 1 , go to another terminal for devnet deployment:
 ```bash
 solana config set --url devnet
 ```
 
-# Verify configuration
-solana config get
-```
+# Fund your local wallet to send tx to devnet 
 
-### Step 3: Fund Your Wallet
-
-Ensure your wallet has sufficient SOL for deployment:
-
-For local development:
 ```bash
-# Request local SOL airdrop
-solana airdrop 2
-```
-
-For devnet:
-```bash
-# Request devnet SOL airdrop (up to 5 SOL per request)
+# Request SOL airdrop
 solana airdrop 2
 ```
 
@@ -72,15 +55,13 @@ solana balance
 
 ### Step 4: Build the Program
 
-Before deploying, you need to build the program:
-
+Before deploying, build the program:
 ```bash
 # Build the sBPF program
 sbpf build
 ```
 
 ### Step 5: Deploy the Program
-
 ```bash
 # Deploy the program
 sbpf deploy
