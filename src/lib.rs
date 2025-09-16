@@ -12,9 +12,11 @@ mod tests {
             .expect("slice with incorrect length");
         let program_id = Pubkey::new_from_array(program_id_keypair_bytes);
 
+        let message = "Hello, Solana!".as_bytes();
+        
         let instruction = Instruction::new_with_bytes(
             program_id,
-            &[],
+            message,  
             vec![]
         );
 
